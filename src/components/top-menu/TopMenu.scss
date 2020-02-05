@@ -7,9 +7,7 @@
   margin-right: 40px;
 }
 
-
 .top-nav__menu__item:nth-of-type(1) > .top-nav__menu__link {
-  color: green;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -23,6 +21,9 @@
   font-weight: 400;
   line-height: 138.31px;
   letter-spacing: 0.24px;
+  &:active {
+    transform: scale(.95);
+  }
 }
 
 .top-nav__menu__item:nth-of-type(1) > .top-nav__menu__link::before {
