@@ -1,7 +1,11 @@
 import React from 'react'
 import './TopMenu.scss'
 
-const TopMenu: React.FunctionComponent<{topMenuIcons: Array<string>}> = (props) => {
+interface TopMenuIconsProps {
+    topMenuIcons: Array<string>
+}
+
+const TopMenu: React.FunctionComponent<TopMenuIconsProps> = props => {
     return (
         <ul className="top-nav__menu">
             {props.topMenuIcons.map((item, index) => {
