@@ -1,11 +1,11 @@
 import React, {Component} from 'react'
 import './AppHeader.scss'
-import {TopMenu} from '../top-menu/TopMenu'
+import TopMenu from '../top-menu/TopMenu'
 
 const logo = require('../../assets/images/header/logo.png')
 
 const AppHeader:React.FC = () => {
-    let topMenuIcons: Array<string> = ['plus', 'search', 'bell', 'circle']
+    const topMenuIcons: Array<string> = ['plus', 'search', 'bell', 'circle']
     return (
         <header className="header">
             <nav className="top-nav">
