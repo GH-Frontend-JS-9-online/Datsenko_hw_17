@@ -1,14 +1,10 @@
 import React from 'react'
 import './TopMenu.scss'
 
-type TopMenuProps = {
-    topMenuIcons: Array<string>
-}
-
-const TopMenu = ({topMenuIcons}:TopMenuProps) => {
+const TopMenu: React.FunctionComponent<{topMenuIcons: Array<string>}> = (props) => {
     return (
         <ul className="top-nav__menu">
-            {topMenuIcons.map((item, index) => {
+            {props.topMenuIcons.map((item, index) => {
               return (
                   <li key={index} className="top-nav__menu__item">
                       <a href="/" className="top-nav__menu__link" >
