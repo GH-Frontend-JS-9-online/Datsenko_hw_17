@@ -5,7 +5,7 @@ type TopMenuProps = {
     topMenuIcons: Array<string>
 }
 
-export const TopMenu = ({topMenuIcons}:TopMenuProps) => {
+const TopMenu = ({topMenuIcons}:TopMenuProps) => {
     return (
         <ul className="top-nav__menu">
             {topMenuIcons.map((item, index) => {
@@ -20,6 +20,8 @@ export const TopMenu = ({topMenuIcons}:TopMenuProps) => {
         </ul>
     )
 }
+
+export default TopMenu
 
 
 
