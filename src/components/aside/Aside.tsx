@@ -1,7 +1,11 @@
 import React, {Component} from 'react'
 import './Aside.scss'
 
-const Aside: React.FunctionComponent<{asideMenuIcons: Array<string>}>  = (props) => {
+interface AsideMenuIconsProps {
+    asideMenuIcons: Array<string>
+}
+
+const Aside: React.FunctionComponent<AsideMenuIconsProps> = props => {
     return (
         <aside className="aside">
             <nav className="aside__nav">
