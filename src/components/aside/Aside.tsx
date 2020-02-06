@@ -1,16 +1,12 @@
 import React, {Component} from 'react'
 import './Aside.scss'
 
-type AsideMenuProps = {
-    asideMenuIcons: Array<string>
-}
-
-const Aside = ({asideMenuIcons}:AsideMenuProps) => {
+const Aside: React.FunctionComponent<{asideMenuIcons: Array<string>}>  = (props) => {
     return (
         <aside className="aside">
             <nav className="aside__nav">
                 <ul className="aside__nav__menu">
-                    {asideMenuIcons.map((item, index) => {
+                    {props.asideMenuIcons.map((item, index) => {
                         return (
                             <li key={index} className="aside__nav__menu__item">
                                 <a href="#" className="aside__nav__menu__link" >
