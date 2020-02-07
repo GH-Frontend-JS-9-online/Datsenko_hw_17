@@ -1,0 +1,15 @@
+.projects-menu {
+  width: 80%;
+  margin: 58px auto 0;
+  display: flex;
+  justify-content: space-between;
+  color: #9ea3b4;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.32px;
+  align-items: center;
+  &__item {
+    width: 100%;
+    text-align: center;
+  }
+}
