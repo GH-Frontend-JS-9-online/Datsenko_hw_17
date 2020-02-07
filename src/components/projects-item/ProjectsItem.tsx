@@ -10,7 +10,9 @@ const ProjectItem: React.FC<ProjectsItemProps> = props => {
         <>
             {props.projectsItems.map(({ title, timeSpent, company, cost, deadline, progress, status, assigned }) => {
                 return (
-                    <ul className="projects" style={{ borderColor: (progress === 0) ? '#9ea3b4' :  (progress === 100) ? '#4caf50' : '#2196f3'}}>
+                    <ul className="projects" style={
+                        { borderColor: (progress === 0) ? '#9ea3b4' :  (progress === 100) ? '#4caf50' : '#2196f3'}
+                    }>
                         <li className="projects__item">
                             <div className="title">
                                 <h4>{title}</h4>
