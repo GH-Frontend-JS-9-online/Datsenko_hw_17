@@ -6,6 +6,12 @@ type ProjectsItemProps = {
 }
 
 const ProjectItem: React.FC<ProjectsItemProps> = props => {
+    const convertDate = (payLoadDate:string):string => {
+        const monthNames:Array<string> = ['January', 'February', 'March', 'April', 'May', 'June',
+            'July', 'August', 'September', 'October', 'November', 'December']
+        const date: Date = new Date(payLoadDate)
+        return `${date.getDate()} ${monthNames[date.getMonth()]} ${date.getFullYear()}`
+    }
     return (
         <>
             {props.projectsItems.map(({ title, timeSpent, company, cost, deadline, progress, status, assigned }) => {
@@ -26,7 +32,7 @@ const ProjectItem: React.FC<ProjectsItemProps> = props => {
                         </li>
                         <li className="projects__item">
                             <div className="deadline">
-                                <h4>{deadline}</h4>
+                                <h4>{`${convertDate(deadline)}`}</h4>
                                 <p>10 days left</p>
                             </div>
                         </li>
