@@ -6,7 +6,7 @@ import ProjectsItem from '../projects-item/ProjectsItem'
 const Middle:React.FunctionComponent = () => {
     return (
         <div className="middle">
-            <SecondMenu/>
+            <SecondMenu amountProjects={[...JSON.parse(localStorage.getItem('projectsPayloads') as any)].length}/>
             <ProjectsItem projectsItems={[...JSON.parse(localStorage.getItem('projectsPayloads') as any)]} />
         </div>
     )
