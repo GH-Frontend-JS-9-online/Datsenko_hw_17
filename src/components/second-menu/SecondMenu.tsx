@@ -1,14 +1,18 @@
 import React from 'react'
 import './SecondMenu.scss'
 
-const SecondMenu: React.FunctionComponent = () => {
+type AmountProjectsProps = {
+    amountProjects: number
+}
+
+const SecondMenu: React.FC<AmountProjectsProps> = props => {
     return (
         <nav className="second-nav">
             <ul className="second-nav__menu">
                <ul className="second-nav__left-menu">
                    <li className="second-nav__left-menu__item">
                        <a href="/" className="second-nav__left-menu__link">
-                           All Projects (358)
+                           {`All Projects (${props.amountProjects})`}
                        </a>
                    </li>
                    <li className="second-nav__left-menu__item">
