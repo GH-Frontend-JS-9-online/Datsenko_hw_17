@@ -14,10 +14,10 @@ const ProjectItem: React.FC<ProjectsItemProps> = props => {
     }
     return (
         <>
-            {props.projectsItems.map(({ title, timeSpent, company, cost, deadline, progress, status, assigned }) => {
+            {props.projectsItems.map(({ title, timeSpent, company, cost, deadline, progress, status, assigned, _id }) => {
                 return (
-                    <ul className="projects" style={
-                        { borderColor: (progress === 0) ? '#9ea3b4' :  (progress === 100) ? '#4caf50' : '#2196f3'}
+                    <ul key={_id as any} className="projects" style={
+                        { borderColor: (progress === 0) ? '#e2e3e8' :  (progress === 100) ? '#4caf50' : '#2196f3'}
                     }>
                         <li className="projects__item">
                             <div className="title">
@@ -44,7 +44,9 @@ const ProjectItem: React.FC<ProjectsItemProps> = props => {
                         <li className="projects__item">
                             <div className="progress">
                                 <h4>{`${progress}%`}</h4>
-                                <progress max="100" value={progress}></progress>
+                                <div><span style={
+                                    {width: `${progress}%`, background:(progress === 0) ? '#9ea3b4' :  (progress === 100) ? '#4caf50' : '#2196f3' }
+                                }></span></div>
                             </div>
                         </li>
                         <li className="projects__item">

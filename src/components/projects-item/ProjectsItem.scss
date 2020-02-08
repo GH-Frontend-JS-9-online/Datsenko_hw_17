@@ -20,18 +20,27 @@
 .progress,
 .assigned {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
 .progress > h4 {
   margin-right: 16px;
+
 }
 
-.progress > progress {
+.progress:last-child > div {
+  width: 80%;
   height: 8px;
   border-radius: 4px;
-  background: #2196f3;
+  background: #9ea3b4;
+}
+
+.progress > div > span {
+  display: block;
+  height: 100%;
+  border-radius:4px;
+  background-color: rgb(43,194,83);
 }
 
 .assigned i {
