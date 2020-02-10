@@ -22,6 +22,7 @@ const AddProject:React.FC<AddProjectProps> = props => {
                 <input type="text" placeholder="Cost..."/>
                 <input type="text" placeholder="Deadline..."/>
                 <input type="text" placeholder="Assigned..."/>
+                <button type="submit">Add new Project</button>
             </form>
         </div>
     )
