@@ -1,7 +1,7 @@
 import React from 'react'
 import './AppHeader.scss'
 import TopMenu from '../top-menu/TopMenu'
-const logo = require('../../assets/images/header/logo.png')
+const logo = require('../../assets/images/header/logo.svg')
 
 const AppHeader:React.FunctionComponent = () => {
     const topMenuIcons: Array<string> = ['plus', 'search', 'bell', 'circle']
